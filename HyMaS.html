@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 3: Horas y minutos a segundos</title>
+</head>
+<body>
+    <h1><ins><i><ul><strong>Tarea: Convertir a segundos</ins></i></ul></strong></h1>
+    <ul><h2>3.- Convertir horas y minutos a segundos</h2></ul>
+    <ul><input type="number" id="horas" placeholder="Horas"></ul>
+    <ul><input type="number" id="minutos" placeholder="Minutos"></ul>
+    <ul><button onclick="convertirASegundos()">Convertir</button></ul>
+    <p id="ResultadoHoras"></p>
+    <p id="ResultadoMinutos"></p>
+    <p id="ResultadoSegundos"></p>
+
+    <script>
+        function convertirASegundos() {
+            var horas = parseFloat(document.getElementById("horas").value);
+            var minutos = parseFloat(document.getElementById("minutos").value);
+            var MinuSegun = (minutos * 60);
+            var HoraSegun = (horas * 3600)
+            var segundos = (horas * 3600) + (minutos * 60);
+            document.getElementById("ResultadoMinutos").innerText = "Minutos a segundos:" + MinuSegun;
+            document.getElementById("ResultadoHoras").innerText = "Horas a segundos:" + HoraSegun;
+            document.getElementById("ResultadoSegundos").innerText = "Horas + Minutos en segundos:" + segundos;
+        }
+    </script>
+</body>
+</html>
